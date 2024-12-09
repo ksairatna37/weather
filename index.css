@@ -1,0 +1,868 @@
+
+    @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
+
+    html {
+      height: auto;
+      font-family: "Jost", sans-serif;
+    }
+
+
+    body {
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0;
+      
+      color: white;
+    }
+
+    .blur {
+      position: absolute;
+      right: 0%;
+      width: 35%;
+      height: 100%;
+      filter: blur(50px);
+      backdrop-filter: blur(10px);
+    }
+
+    .temp {
+      width: 10%;
+      height: 20%;
+      position: absolute;
+      bottom: 10%;
+      left: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 9rem;
+      font-weight: 600;
+      color: white;
+    }
+
+    .place-info {
+      width: 25%;
+      height: 14%;
+      position: absolute;
+      display: flex;
+      border: 10px solid white;
+      border-style: none none none solid;
+      border-left-width: 2px;
+      bottom: 13%;
+      left: 25%;
+    }
+
+    .place-mahiti {
+      width: 70%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+    }
+
+    .place {
+      position: relative;
+      width: 100%;
+      font-size: 2vw;
+      white-space: nowrap;
+      color: white;
+      height: 60%;
+    }
+
+    .date {
+      position: relative;
+      color: white;
+      width: 60%;
+      font-size: larger;
+      height: 40%;
+      align-items: center;
+      display: flex;
+    }
+
+    .status {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      height: 100%;
+      right: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60%;
+      width: 100%;
+    }
+
+    .condition {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40%;
+      width: 100%;
+      color: white;
+      font-size: large;
+    }
+
+    .search-box {
+      position: absolute;
+      display: flex;
+      width: 28%;
+      height: 10%;
+      right: 3%;
+      top: 8%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-icon {
+      position: relative;
+      width: 10%;
+      height: 100%;
+
+    }
+
+    .common {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-line {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border: 1px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .search-line input[type="text"] {
+      display: flex;
+      position: absolute;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 60%;
+      left: 0;
+      top: 0;
+      height: 80%;
+      font-family: "Jost", sans-serif;
+      font-size: large;
+      outline: none;
+      background: none;
+      border: 1px solid rgb(255, 255, 255);
+      border-style: none none solid none;
+      color: black;
+    }
+
+
+    .search-line input[type="text"]::placeholder {
+      font-size: x-large;
+      font-weight: 400;
+      color: var(--black);
+    }
+
+    .search {
+      position: absolute;
+      width: 30%;
+      height: 80%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+    }
+
+    .search input:hover {
+      cursor: pointer;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    .search input {
+      width: 100%;
+      height: 100%;
+      background: none;
+      color: rgb(0, 0, 0);
+      border: none;
+      font-size: x-large;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 500ms;
+    }
+
+    .search-box svg {
+      width: 40%;
+      height: 40%;
+      fill: rgb(255, 0, 0);
+    }
+
+    .line {
+      position: absolute;
+      width: 28%;
+      height: 1%;
+      right: 3%;
+      top: 23%;
+      border: 2px solid rgba(0, 0, 0);
+      border-style: none none solid none;
+      display: block;
+    }
+
+    .weather-details {
+      position: absolute;
+      display: block;
+      width: 28%;
+      height: 60%;
+      right: 3%;
+      top: 30%;
+    }
+
+    .name {
+      position: relative;
+      display: flex;
+      font-size: x-large;
+      font-weight: 400;
+      color: var(--black);
+      width: 100%;
+      height: 20%;
+    }
+
+    .weather-info {
+      position: absolute;
+      display: flex;
+      top: 10%;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: left;
+      width: 100%;
+      height: 80%;
+    }
+
+    .weather-info div {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      height: 10%;
+    }
+
+    .weather-info div span {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      font-weight: 500;
+    }
+
+    .weather-info div span:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    .weather-info div span:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    .forcast {
+      display: block;
+    }
+
+    .more {
+      display: none;
+    }
+
+    .show-less {
+      display: none;
+    }
+
+    .loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .loader {
+      width: 120px;
+      height: 75px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .loader span {
+      font-size: 22px;
+      text-transform: uppercase;
+      margin: auto;
+    }
+
+    .ball {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: rgb(14, 4, 4);
+      animation: bounce .5s alternate;
+      animation-iteration-count: infinite;
+    }
+
+    .ball:nth-child(2) {
+      animation-delay: .16s;
+    }
+
+    .ball:nth-child(3) {
+      animation-delay: .32s;
+    }
+
+    @keyframes bounce {
+      from {
+        transform: scaleX(1.25);
+      }
+
+      to {
+        transform:
+          translateY(-50px) scaleX(1);
+      }
+    }
+
+    .try {
+      display: none;
+    }
+
+    .container {
+      width: 50%;
+      height: 50%;
+      border: 1px solid red;
+    }
+
+    .linee {
+      position: absolute;
+      width: 28%;
+      height: 1%;
+      right: 0;
+      border: 2px solid rgba(0, 0, 0);
+      border-style: none none solid none;
+    }
+
+    @media screen and (max-width: 700px) {
+      html {
+        font-family: "Jost", sans-serif;
+      }
+
+      body {
+        -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0;
+      }
+
+      .search-box {
+        width: 90%;
+      }
+
+      .search {
+        height: 60%;
+        top: 1rem;
+      }
+
+      .search-line input {
+        height: 60%;
+        font-size: x-large;
+      }
+
+      .temp {
+        position: fixed;
+        left: 5rem;
+        bottom: 20%;
+        font-size: 7rem;
+      }
+
+      .place-info {
+        bottom: 2rem;
+        left: 10%;
+        width: 90%;
+        left: 5%;
+        border-left-width: 3px;
+        height: 9rem;
+      }
+
+      .place-mahiti {
+        width: 90%;
+        border-left-width: 10px;
+        margin-left: 0.5rem;
+        height: 100%;
+      }
+
+      .weather-details {
+        display: none;
+        top: 24%;
+        width: 92%;
+      }
+
+      .date {
+        width: 10rem;
+        margin-left: 0;
+        text-align: left;
+        line-height: 37px;
+        height: fit-content;
+      }
+
+
+      .place {
+        margin-left: 0;
+        font-size: 2rem;
+        height: 43%;
+      }
+
+      .status img {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      .condition {
+        font-size: 1.3rem;
+      }
+
+      .status {
+        height: 65%;
+      }
+
+      .blur {
+        display: none;
+        top: 19%;
+        height: 72%;
+        width: 100%;
+      }
+
+      .line {
+        display: none;
+        top: 20%;
+        width: 92%;
+      }
+
+      .more {
+        position: absolute;
+        display: flex;
+        width: 5rem;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        color: white;
+        height: 24%;
+        border: 1px solid black;
+        right: 1rem;
+        bottom: 0;
+      }
+
+      .show-less {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        width: 100%;
+        height: 15%;
+      }
+
+      .less {
+        border: 1px solid black;
+        text-align: center;
+        width: 30%;
+        height: 50%;
+        display: flex;
+        font-size: 1rem;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+      }
+
+      .about {
+        width: 100%;
+        height: 80% !important;
+      }
+
+      .about-button {
+        position: relative;
+        width: 25%;
+        font-size: 1rem !important;
+        height: 8%;
+      }
+
+      .contactme {
+        position: absolute;
+        right: 0;
+        width: 35%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        opacity: 0;
+        z-index: -9999;
+      }
+
+      .back-button {
+        width: 25% !important;
+        height: 35% !important;
+        font-size: 1rem !important;
+        font-weight: 500 !important;
+      }
+
+      .about-info {
+        height: 85% !important;
+        top: 0 !important;
+        left: 5% !important;
+      }
+
+      .contact-buttons {
+        bottom: 5% !important;
+        overflow: auto !important;
+      }
+
+      .about-data {
+        top: 5% !important;
+    height: 65% !important;
+      }
+    }
+
+    @media only screen and (max-width: 380px) {
+      body{
+        -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0;
+      }
+      .about-info {
+        height: 100% !important;
+      }
+
+      .about-data {
+        top: 3% !important;
+      }
+
+      .contact-buttons {
+        bottom: 13% !important;
+      }
+    }
+
+    @media only screen and (max-width: 700px) and (min-width: 450px) {
+      body{
+        -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0;
+      }
+      .temp {
+        left: 5rem;
+      }
+
+      .date {
+        width: 35%;
+        align-items: baseline
+      }
+
+      .place-info {
+        bottom: 2rem;
+        height: 15%;
+      }
+
+      .about-info {
+        animation: changeee 1.5s 1;
+      }
+
+      @keyframes changeee {
+        0% {
+          top: 50%;
+        }
+
+        100% {
+          top: 5%;
+        }
+      }
+
+    }
+
+    .contactme {
+      position: absolute;
+      right: 0;
+      width: 35%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      opacity: 0;
+      z-index: -9999;
+    }
+
+    .about-button {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: larger;
+      width: 20%;
+      height: 10%;
+      border: 1px solid black;
+      background: none;
+      bottom: 0;
+      left: 0;
+      font-weight: 500;
+    }
+
+    .about-button:hover {
+      cursor: pointer;
+    }
+
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+      text-decoration: underline;
+    }
+
+    .about-data a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
+    .about-data a:hover:after {
+      width: 100%;
+      left: 0;
+    }
+
+    .about {
+      position: absolute;
+      right: 0%;
+      width: 35%;
+      height: 100%;
+      display: none;
+    }
+
+    .about-info {
+      position: absolute;
+      right: 5%;
+      top: 20%;
+      width: 90%;
+      height: 70%;
+
+    }
+
+    .about-data {
+      position: absolute;
+      right: 5%;
+      top: 0;
+      width: 90%;
+      font-size: 1rem;
+      height: 55%;
+      overflow: auto;
+      border: 2px solid black;
+      border-style: none none solid none;
+      animation: show 1.5s 1;
+    }
+
+    @keyframes show {
+      from {
+        top: 50%
+      }
+
+      to {
+        top: 0%;
+      }
+    }
+
+    .back-button {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20%;
+      height: 40%;
+      border: 1px solid black;
+      font-size: larger;
+    }
+
+    .back-button:hover {
+      cursor: pointer;
+    }
+
+    .contact-buttons {
+      position: absolute;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      bottom: 0;
+      width: 100%;
+      height: 20%;
+      font-size: larger;
+    }
+
+    .contactform {
+      position: absolute;
+      width: 90%;
+      height: 100%;
+    }
+
+
+    .socialmedia {
+      position: relative;
+      width: 100%;
+      height: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .media-icon {
+      width: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60%;
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+
+    .media-icon:hover {
+      cursor: pointer;
+    }
+
+    .media-icon:hover .fab {
+      background: linear-gradient();
+      transform: rotate(360deg);
+      box-shadow: 0px 2px 0px #fff;
+    }
+
+    .fab {
+      transition: all .4s;
+    }
+
+    .fab:hover {
+      opacity: .9;
+      transform: rotate(360deg);
+      box-shadow: 0px 0px 0px #fff;
+    }
+
+    .fab:hover .media-icon {
+      border: none;
+    }
+
+    .media-icon a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .formm{
+      position: relative;
+      top: 0;
+      width: 100%;
+      height: 80%;
+    }
+    .form{
+      position: relative;
+      top: 5%;
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      height: 75%;
+    }
+    form{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+    }
+    .form input[type=text],
+    input[type=tel]{
+      width: 100%;
+      height: 3rem;
+      background: none;
+      border: 1px solid white;
+      border-style: none none solid none;
+      font-family: "Jost", sans-serif;
+      font-size: large;
+      color: white;
+      outline: none;
+    }
+    .form input[type=text]::placeholder,input[type=tel]::placeholder,textarea::placeholder{
+      color: white;
+    }
+
+    textarea {
+      width: 100%;
+      outline: none;
+      background: none;
+      border: 1px solid white;
+      border-style: none none solid none;
+      overflow: auto;
+      max-width: 100%;
+      min-width: 100%;
+      min-height: 7rem;
+      max-height: 10rem;
+      font-family: "Jost", sans-serif;
+      font-size: large;
+      color: white;
+    }
+    
+    .user-name {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      height: 10%;
+      position: relative;
+      left: 5%;
+    }
+    .send{
+      position: relative;
+      top: 25%;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25%;
+    justify-content: space-evenly;
+    }
+    #sub{
+      padding: 0px 0px ;
+      margin: 0;
+      outline: none;
+      background: none;
+    }
+    @media only screen and (max-height: 500px) {
+      .search {
+    height: 85%;}
+    .temp{
+      bottom: 48%;
+    font-size: 6rem;
+    }
+    }
+ 
